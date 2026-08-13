@@ -39,6 +39,7 @@ export function Navbar() {
 
   useEffect(() => {
     let ticking = false;
+    let lastDomCheck = 0;
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -50,6 +51,11 @@ export function Navbar() {
 
       if (!ticking) {
         window.requestAnimationFrame(() => {
+          ticking = false;
+          const now = Date.now();
+          if (now - lastDomCheck < 150) return;
+          lastDomCheck = now;
+
           // Detect background color under navbar
           const navCenterY = 40;
           const navCenterX = window.innerWidth / 2;

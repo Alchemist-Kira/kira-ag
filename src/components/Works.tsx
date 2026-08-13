@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -170,17 +171,19 @@ export function Works() {
                 >
                   <div className="w-full h-full relative transition-transform duration-1000 group-hover:scale-105" style={{ color: p.accent }}>
                     {p.id === 1 && (
-                      <img 
+                      <Image 
                         src="/530791506104478198.jpg" 
                         alt={p.title} 
-                        className="w-full h-full object-cover opacity-90" 
+                        fill
+                        className="object-cover opacity-90" 
                       />
                     )}
                     {p.id === 2 && (
-                      <img 
+                      <Image 
                         src="/aura-financial.png" 
                         alt={p.title} 
-                        className="w-full h-full object-cover opacity-20" 
+                        fill
+                        className="object-cover opacity-20" 
                       />
                     )}
                     {p.id === 3 && (

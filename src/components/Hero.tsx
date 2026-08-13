@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { RevealStagger, RevealItem } from "./ui/reveal";
 
@@ -9,10 +10,12 @@ export function Hero() {
     <section className="relative min-h-[100dvh] w-full overflow-hidden pt-32 pb-16 flex items-center">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
           alt="Zen Architecture"
-          className="w-full h-full object-cover opacity-10 grayscale"
+          fill
+          priority
+          className="object-cover opacity-10 grayscale"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-canvas)] via-[var(--color-canvas)]/90 to-transparent"></div>
       </div>

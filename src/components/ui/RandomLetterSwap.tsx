@@ -8,10 +8,10 @@ import { motion, useAnimate, type AnimationOptions } from "motion/react"
 export default function RandomLetterSwap(props: Props) {
     props = { ...COMPONENT_DEFAULTS, ...props }
     const {
-        label,
-        mode,
-        reverse,
-        staggerDuration,
+        label = COMPONENT_DEFAULTS.label!,
+        mode = COMPONENT_DEFAULTS.mode,
+        reverse = COMPONENT_DEFAULTS.reverse,
+        staggerDuration = COMPONENT_DEFAULTS.staggerDuration!,
         ease,
         font,
         color,

@@ -4,7 +4,7 @@ import React, { cloneElement } from "react";
 import { cn } from "@/lib/utils";
 
 interface GooeyIconProps extends React.HTMLAttributes<HTMLDivElement> {
-  icon: React.ReactElement;
+  icon: React.ReactElement<{ className?: string }>;
   colorClass?: string;
   bgColorClass?: string;
 }
