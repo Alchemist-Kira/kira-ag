@@ -1,5 +1,6 @@
 "use client";
 import { motion, useReducedMotion } from "motion/react";
+import Image from "next/image";
 import { GlassCard } from "./ui/glass-card";
 import { RevealStagger, RevealItem } from "./ui/reveal";
 import { Star, Quotes } from "@phosphor-icons/react";
@@ -49,7 +50,7 @@ export function Testimonials() {
                     </p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <img src={review.img} alt={review.name} className="w-14 h-14 rounded-full object-cover shadow-sm border-2 border-white" />
+                    <Image src={review.img} alt={review.name} width={56} height={56} className="w-14 h-14 rounded-full object-cover shadow-sm border-2 border-white" />
                     <div>
                       <h4 className="font-display text-lg text-[var(--color-navy)] font-semibold">{review.name}</h4>
                       <p className="text-sm text-[var(--color-stone)]">{review.role}</p>

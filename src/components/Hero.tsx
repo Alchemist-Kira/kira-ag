@@ -3,6 +3,8 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { RevealStagger, RevealItem } from "./ui/reveal";
 
+const MotionImage = motion.create(Image);
+
 export function Hero() {
   const reduce = useReducedMotion();
 
@@ -50,11 +52,13 @@ export function Hero() {
               >
                 <div className="flex -space-x-3">
                   {["32", "12", "47"].map((id, i) => (
-                    <motion.img
+                    <MotionImage
                       key={id}
                       src={`https://i.pravatar.cc/150?img=${id}`}
                       alt="Founder"
-                      className="w-10 h-10 rounded-full border-2 border-white shadow-sm relative"
+                      width={40}
+                      height={40}
+                      className="w-10 h-10 rounded-full border-2 border-white shadow-sm relative object-cover"
                       style={{ zIndex: 3 - i }}
                       whileHover={reduce ? undefined : { y: -4, scale: 1.1 }}
                       transition={{ type: "spring", stiffness: 400, damping: 20 }}
