@@ -77,6 +77,7 @@ export function Process() {
             >
 
               
+              <h4 className="mb-4 text-sm font-bold text-[var(--color-stone)] tracking-[0.2em] uppercase">03 / Process</h4>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black tracking-tight gradient-text mb-6">
                 The <br/> Blueprint.
               </h2>

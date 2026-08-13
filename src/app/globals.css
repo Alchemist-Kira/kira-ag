@@ -371,3 +371,14 @@ body {
 .animate-spin-slow {
   animation: spin-slow 12s linear infinite;
 }
+/* Responsive card mask */
+.card-mask {
+  mask-image: linear-gradient(to top, black 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 40%, transparent 100%);
+}
+@media (min-width: 768px) {
+  .card-mask {
+    mask-image: linear-gradient(to right, transparent, black 35%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 35%);
+  }
+}

@@ -19,6 +19,9 @@ export function FAQ() {
       <div className="max-w-[800px] mx-auto">
         <RevealStagger className="text-center mb-16">
           <RevealItem>
+            <h4 className="mb-4 text-sm font-bold text-[var(--color-stone)] tracking-[0.2em] uppercase">06 / FAQ</h4>
+          </RevealItem>
+          <RevealItem>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black tracking-tight gradient-text mb-6">Frequently Asked Questions</h2>
           </RevealItem>
         </RevealStagger>

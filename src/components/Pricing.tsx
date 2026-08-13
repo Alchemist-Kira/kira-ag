@@ -424,7 +424,7 @@ export function Pricing() {
         <RevealStagger className="flex flex-col items-center text-center mb-28">
           <RevealItem>
             <div className="inline-block px-5 py-2 rounded-full bg-white/80 backdrop-blur-md border border-white shadow-sm text-sm font-bold text-gray-500 mb-6 uppercase tracking-widest">
-              Pricing
+              05 / Pricing
             </div>
           </RevealItem>
           <RevealItem>
