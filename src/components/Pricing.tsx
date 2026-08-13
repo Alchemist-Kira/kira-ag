@@ -342,7 +342,7 @@ const PlanBlock = ({ plan, index }: { plan: typeof plansData[0], index: number }
 
       {/* Right Column (or Left if reversed): Pricing Card (Frosted White Glass) */}
       <div className={`w-full relative h-full flex flex-col ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}>
-        <div className="w-full h-full min-h-[640px] rounded-[40px] p-8 md:p-10 flex flex-col relative overflow-hidden bg-white/60 backdrop-blur-3xl border border-white shadow-[0_12px_48px_rgba(0,0,0,0.06),inset_0_2px_12px_rgba(255,255,255,0.8)] transition-all duration-500 transform-gpu will-change-transform">
+        <motion.div layout className="w-full h-full min-h-[640px] rounded-[40px] p-8 md:p-10 flex flex-col relative overflow-hidden bg-white/60 backdrop-blur-3xl border border-white shadow-[0_12px_48px_rgba(0,0,0,0.06),inset_0_2px_12px_rgba(255,255,255,0.8)] transition-colors duration-500 transform-gpu will-change-transform">
           
           {isAllOff ? (
             <motion.div 
@@ -361,6 +361,7 @@ const PlanBlock = ({ plan, index }: { plan: typeof plansData[0], index: number }
             </motion.div>
           ) : (
             <motion.div 
+              layout
               key="pricing"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -386,25 +387,25 @@ const PlanBlock = ({ plan, index }: { plan: typeof plansData[0], index: number }
                 </div>
               </div>
 
-              <ul className="flex flex-col gap-4 mb-12 mt-2">
+              <motion.ul layout className="flex flex-col gap-4 mb-12 mt-2">
                 <AnimatePresence mode="popLayout">
                   {visibleFeatures.map((feature) => (
                     <FeatureItem key={feature.text} feature={feature} animateIgnition={hasMounted} />
                   ))}
                 </AnimatePresence>
-              </ul>
+              </motion.ul>
             </motion.div>
           )}
 
-          <div className="mt-auto relative z-20 group">
+          <motion.div layout className="mt-auto relative z-20 group">
             <a
               href="/contact"
               className="w-full inline-flex items-center justify-center font-bold rounded-2xl cursor-pointer text-base md:text-lg px-6 py-5 bg-gray-900 text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-black hover:shadow-xl"
             >
               {isAllOff ? "Book a Consultation" : plan.cta}
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

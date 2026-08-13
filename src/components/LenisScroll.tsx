@@ -5,10 +5,12 @@ import Lenis from "lenis";
 
 export function LenisScroll() {
   useEffect(() => {
+    // Disable Lenis on mobile devices for better performance
+    if (window.matchMedia("(max-width: 768px)").matches) return;
+
     const lenis = new Lenis({
       duration: 1.2,
       smoothWheel: true,
-      // smoothTouch: false, // default is false anyway
       wheelMultiplier: 1,
     });
 
