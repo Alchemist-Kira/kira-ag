@@ -43,7 +43,7 @@ export function Hero() {
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-8">
-          <RevealStagger className="max-w-3xl">
+          <RevealStagger className="max-w-3xl fast-mobile-reveal">
             {/* Social Proof Badge */}
             <RevealItem>
               <motion.div

@@ -382,3 +382,13 @@ body {
     -webkit-mask-image: linear-gradient(to right, transparent, black 35%);
   }
 }
+
+/* Force fast loading of hero text on mobile */
+@media (max-width: 768px) {
+  .fast-mobile-reveal,
+  .fast-mobile-reveal > div,
+  .fast-mobile-reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
