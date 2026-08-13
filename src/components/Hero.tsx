@@ -21,20 +21,20 @@ export function Hero() {
       </div>
 
       {/* Background organic shapes with float animation */}
-      <div className="absolute top-0 right-0 w-full md:w-[60%] h-full opacity-30 mix-blend-multiply pointer-events-none z-0">
-        <svg viewBox="0 0 800 800" className="w-full h-full object-cover" style={{ animation: reduce ? 'none' : 'float 20s ease-in-out infinite' }}>
+      <div className="absolute top-0 right-0 w-full md:w-[60%] h-full opacity-30 mix-blend-multiply pointer-events-none z-0 transform-gpu will-change-transform">
+        <svg viewBox="0 0 800 800" className="w-full h-full object-cover" style={{ animation: reduce ? 'none' : 'float 20s ease-in-out infinite', willChange: 'transform' }}>
           <path d="M421.5,654.5C538.2,654.5,650,566.2,650,421.5C650,276.8,538.2,188.5,421.5,188.5C304.8,188.5,193,276.8,193,421.5C193,566.2,304.8,654.5,421.5,654.5Z" fill="var(--color-river)" />
         </svg>
       </div>
-      <div className="absolute top-[10%] right-[10%] w-[40%] h-[60%] opacity-15 mix-blend-multiply pointer-events-none z-0">
-        <svg viewBox="0 0 800 800" className="w-full h-full" style={{ animation: reduce ? 'none' : 'float-reverse 25s ease-in-out infinite' }}>
+      <div className="absolute top-[10%] right-[10%] w-[40%] h-[60%] opacity-15 mix-blend-multiply pointer-events-none z-0 transform-gpu will-change-transform">
+        <svg viewBox="0 0 800 800" className="w-full h-full" style={{ animation: reduce ? 'none' : 'float-reverse 25s ease-in-out infinite', willChange: 'transform' }}>
           <path d="M375,615C471.6,615,550,536.6,550,440C550,343.4,471.6,265,375,265C278.4,265,200,343.4,200,440C200,536.6,278.4,615,375,615Z" fill="var(--color-terracotta)" />
         </svg>
       </div>
 
       {/* Decorative spinning star element (Ported from Bijaya Portfolio) */}
-      <div className="absolute bottom-[20%] left-[10%] opacity-20 pointer-events-none z-0 animate-spin-slow">
-        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--color-terracotta)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+      <div className="absolute bottom-[20%] left-[10%] opacity-20 pointer-events-none z-0 animate-spin-slow transform-gpu will-change-transform">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--color-terracotta)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ willChange: 'transform' }}>
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
         </svg>
       </div>

@@ -413,10 +413,10 @@ const PlanBlock = ({ plan, index }: { plan: typeof plansData[0], index: number }
 export function Pricing() {
   return (
     <section className="text-gray-900 w-full py-24 md:py-32 px-6 lg:px-12 relative overflow-hidden" id="pricing">
-      {/* High-End Holographic Silver Ambient Orbs (Hardware Accelerated for Mobile) */}
-      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-100/40 blur-[120px] rounded-full pointer-events-none mix-blend-multiply opacity-60 transform-gpu will-change-transform"></div>
-      <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-violet-100/40 blur-[140px] rounded-full pointer-events-none mix-blend-multiply opacity-50 transform-gpu will-change-transform"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-slate-200/50 blur-[100px] rounded-full pointer-events-none transform-gpu will-change-transform"></div>
+      {/* High-End Holographic Silver Ambient Orbs (Optimized with hardware-accelerated gradients instead of expensive CSS blurs) */}
+      <div className="absolute top-[-100px] left-[-100px] w-[800px] h-[800px] rounded-full pointer-events-none mix-blend-multiply opacity-60 transform-gpu" style={{ background: 'radial-gradient(circle, rgba(219, 234, 254, 0.4) 0%, transparent 60%)', willChange: 'transform' }}></div>
+      <div className="absolute bottom-[-200px] right-[-200px] w-[1000px] h-[1000px] rounded-full pointer-events-none mix-blend-multiply opacity-50 transform-gpu" style={{ background: 'radial-gradient(circle, rgba(237, 233, 254, 0.4) 0%, transparent 60%)', willChange: 'transform' }}></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[700px] rounded-full pointer-events-none transform-gpu" style={{ background: 'radial-gradient(ellipse, rgba(226, 232, 240, 0.5) 0%, transparent 60%)', willChange: 'transform' }}></div>
 
       <div className="max-w-[1100px] mx-auto relative z-10">
         

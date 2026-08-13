@@ -33,6 +33,7 @@ export function RevealItem({ children, className }: { children: React.ReactNode;
         },
       }}
       className={className}
+      style={{ willChange: "transform, opacity" }}
     >
       {children}
     </motion.div>
