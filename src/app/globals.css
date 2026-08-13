@@ -240,7 +240,7 @@ body {
   /* Softer, rounder blob for a smooth wave rather than sharp flames */
   border-radius: 43% 57% 43% 57% / 47% 53% 47% 53%;
   z-index: 0;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: translate 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   mix-blend-mode: screen;
 }
 
@@ -277,22 +277,25 @@ body {
   mix-blend-mode: screen;
   animation: fireWaveAnim 2s infinite linear;
   /* Slower */
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: translate 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
 
 @keyframes fireWaveAnim {
   0% {
-    transform: rotate(0deg) scale(1);
+    rotate: 0deg;
+    scale: 1;
   }
 
   50% {
-    transform: rotate(180deg) scale(1.05);
+    rotate: 180deg;
+    scale: 1.05;
   }
 
   /* Subtle breathing */
   100% {
-    transform: rotate(360deg) scale(1);
+    rotate: 360deg;
+    scale: 1;
   }
 }
 
@@ -342,15 +345,15 @@ body {
 }
 
 .btn-fire:hover::before {
-  transform: translateY(-45%);
+  translate: 0 -35px;
 }
 
 .btn-fire:hover::after {
-  transform: translateY(-45%);
+  translate: 0 -25px;
 }
 
 .btn-fire:hover .btn-fire-core {
-  transform: translateY(-25%);
+  translate: 0 -15px;
 }
 
 /* ------------------------------------------------
