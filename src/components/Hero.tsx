@@ -35,7 +35,7 @@ export function Hero() {
       </div>
 
       {/* Decorative spinning star element (Ported from Bijaya Portfolio) */}
-      <div className="absolute bottom-[20%] left-[10%] opacity-20 pointer-events-none z-0 animate-spin-slow transform-gpu will-change-transform">
+      <div className="absolute bottom-[5%] sm:bottom-[10%] md:bottom-[20%] left-[5%] md:left-[10%] opacity-20 pointer-events-none z-0 animate-spin-slow transform-gpu will-change-transform">
         <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--color-terracotta)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ willChange: 'transform' }}>
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
         </svg>
