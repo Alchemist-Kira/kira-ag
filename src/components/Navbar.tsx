@@ -115,6 +115,23 @@ export function Navbar() {
     { label: "FAQ", href: "#faq" },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', href);
+      }
+    } else if (href === '/') {
+      if (window.location.pathname === '/') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.history.pushState(null, '', '/');
+      }
+    }
+  };
+
   return (
     <>
       <svg className="hidden pointer-events-none" aria-hidden="true">
@@ -182,12 +199,7 @@ export function Navbar() {
             <div className={`relative z-[3] flex items-center justify-between w-full h-full ${isScrolled ? "py-2 px-3 sm:py-3 sm:px-4" : "py-4 px-3 sm:py-5 sm:px-6 md:px-12 border-b border-transparent"}`}>
               <Link
                 href="/"
-                onClick={(e) => {
-                  if (window.location.pathname === '/') {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }
-                }}
+                onClick={(e) => handleNavClick(e, '/')}
                 className="flex items-center gap-2.5 group pl-1"
               >
                 <div className="relative">
@@ -209,6 +221,7 @@ export function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="relative px-4 py-2 flex overflow-hidden"
                   >
                     <div className={`relative flex overflow-hidden font-medium transition-colors duration-300 ${isDarkBg ? "text-white" : "text-black"
@@ -325,7 +338,10 @@ export function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      onClick={() => setMobileOpen(false)}
+                      onClick={(e) => {
+                        handleNavClick(e, link.href);
+                        setMobileOpen(false);
+                      }}
                       className={`block px-5 py-3.5 text-[15px] font-medium text-[var(--color-navy)] hover:text-[var(--color-crimson)] transition-colors ${i !== arr.length - 1 ? 'border-b border-black/5' : ''}`}
                     >
                       {link.label}
