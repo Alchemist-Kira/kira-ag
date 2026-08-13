@@ -1,0 +1,8 @@
+D:\Profile\My agency\web\AGENTS.md
+D:\Profile\My agency\web\CLAUDE.md
+D:\Profile\My agency\web\README.md
+D:\Profile\My agency\web\public\file.svg
+D:\Profile\My agency\web\public\globe.svg
+D:\Profile\My agency\web\public\next.svg
+D:\Profile\My agency\web\public\vercel.svg
+D:\Profile\My agency\web\public\window.svg
